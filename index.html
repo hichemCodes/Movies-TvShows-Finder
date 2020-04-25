@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_small_devices.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+
+    <title>Movies & Tv Shows finder</title>
+</head>
+<body>
+       <nav>
+            <div class="contaner_nav">
+            <div class="title flex j_center a_center">
+                    <span>Movies & Tv </span>
+              </div>
+             <form method="POST" action="index.html">
+                            <div class="search">
+                                    <i class="fas fa-search"></i>
+                                  <input type="text" placeholder="search movies" id="query">
+                                  <input type="submit" id="submit" hidden> 
+                             </div>
+                            
+                   
+             </form>
+             <div class="burger">
+                    <div class="burg1"></div>
+                    <div class="burg2"></div>
+                    <div class="burg3"></div>
+             </div>
+            </div>
+       </nav>
+       
+       <div class="container_all flex j_start a_center d_column">
+
+              <div class="desktop_search flex j_center a_center">
+                     <input type="search"  id="desktop_search">
+                     <i class="fas fa-search"></i>
+                     
+              </div>
+              <span class="current_search is-danger"> Movie : Now Playing   </span>
+              <form class="type_choice flex j_center a_center">
+                          <span for="movies_r" class="flex j_center a_center">
+                                <span class="click_movie">Movies</span> 
+                                <div id="movies_r" class="rounded is_selected"></div>
+                          </span> 
+                          <span for="tv_r" class="flex j_center a_center">
+                                <span class="click_tv">Tv</span>  
+                                <div id="tv_r" class="rounded"></div>
+                          </span>  
+              </form>
+
+              <div class="data">
+                    
+                     <div class="moveies"> </div>
+                     
+               </div>
+                    
+                <div class="pages">
+
+                            <button id="addpage" class="button">Load More</button>
+
+                </div> 
+       </div>
+       <div class="option flex j_start a_center d_column">
+              <a href="#"><img id="tv_shows" src="img/popcorn.png" alt=""></a>
+              <ul class="option_container">
+                  <li class="option_item flex j_start a_center active" id="now_playing" tv_option="airing_today">
+                          <i class="far fa-clock"></i>
+                          Now Playing
+                  </li>
+                  <li class="option_item flex j_start a_center" id="popular" tv_option="popular"> <i class="fas fa-fire-alt"></i>Popular</li>
+                  <li class="option_item flex j_start a_center" id="top_rated" tv_option="top_rated"><i class="fas fa-chart-line"></i>Top rated</li>
+                  <li class="option_item flex j_start a_center" id="upcoming" tv_option="on_the_air"><i class="fas fa-forward"></i> UpComing</li>
+                  <li class="favorite" id="favorite"> <i class="far fa-heart"></i>Favorite</li>
+              </ul>
+          <div class="fotter  flex d_column j_center a_center">
+             <span class="licence"> <a target="_blank" href="https://hichemcodes.netlify.app/"> by Laouar Mohamed Hichem</a></span>
+             <button class="button button is-danger is-active github ">
+                            <a class="icon is-small" href="https://hichemcodes.github.io/Movies-TvShows-Finder/" target="blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <span>GitHub</span>
+            </button>
+       </div>    
+       </div>
+   
+   <div class="container_all flex j_start a_center custum_container result_info d_column"> 
+
+   </div>  
+
+  
+    <script type="module" src="js/fetch_data_from_api.js"></script>
+    <script type="module" src="js/App.js"></script>
+    <script  src="js/show_information.js"></script>
+    <script  src="js/fetch_favorite.js"></script>
+
+
+</body>
+</html>

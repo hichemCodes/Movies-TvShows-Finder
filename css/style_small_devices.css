@@ -1,0 +1,54 @@
+
+@media screen and (min-width:470px ){
+
+    .movie{
+        width:32%;
+    }
+    .txt h1{
+        font-size: 1.7rem;
+    }
+   
+}
+@media screen and (min-width:720px){
+
+    .movie{
+        width:31%;
+    }
+   
+   
+
+}
+@media screen and (min-width:810px){
+
+    .movie{
+        width:24%;
+    }
+    
+    
+
+}
+@media screen and (min-width:1000px){
+
+    .movie{
+        width:18.5%;
+    }
+    #information-movie{
+        width: 75%;
+    }
+    .information_container{
+        width:75%;
+    }
+    .information_container .img {
+       position:relative;
+       top:20px;
+    }
+    .information_container .img img{
+        width: 90%;
+    }
+    .container_all{
+         margin-left:16%;
+         margin-top: 8vh;
+    }
+    
+
+}
